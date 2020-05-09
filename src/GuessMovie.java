@@ -8,6 +8,7 @@ public class GuessMovie {
         String movie = WhichMovie.selectedMovie();
 
         String[] movieArr = movie.split("");
+        System.out.println(movieArr);
 
         String[] newArr = new String[movieArr.length];
 
@@ -19,22 +20,23 @@ public class GuessMovie {
             }
         }
 
-        for (int w = 10; 10 - 9) {
+        boolean hasWon = false;
+        Scanner guessLetter = new Scanner(System.in);
+
+        for (int w = 10; !hasWon; w-- ) {
+            System.out.println(String.join("", newArr));
+            System.out.print("Guess a letter: ");
+            String letter = guessLetter.nextLine();
+            if ( movie.indexOf(letter) == -1) {
+                System.out.println("");;
+            }
+
+
+            if(w == 1) {
+                break;
+            }
 
         }
 
-        System.out.println(String.join("", newArr));
-
-
-
-
-
-
-
-
-
-
-
     }
 }
-
